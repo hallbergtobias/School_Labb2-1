@@ -13,11 +13,11 @@ public abstract class RectangularForm implements GeometricalForm {
     int height;
     Color c;
 
-    public RectangularForm (Point a, Point b){
+    public RectangularForm (Point a, int b, int c){
         this.x = a.getX();
         this.y = a.getY();
-        this.width = b.getX() - x;
-        this.height = b.getY() - y;
+        this.width = b;
+        this.height = c;
     }
 
     public RectangularForm () {

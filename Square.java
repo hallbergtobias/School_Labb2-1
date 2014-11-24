@@ -10,7 +10,7 @@ public class Square extends RectangularForm implements GeometricalForm {
     private int side;
 
     public Square(int x, int y, int side, Color c) throws IllegalPositionException {
-        super(new Point(x, y, c), new Point(side, side, c));
+        super(new Point(x, y, c), side, side);
         this.side = side;
         this.c = c;
     }

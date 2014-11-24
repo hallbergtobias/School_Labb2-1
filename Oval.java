@@ -8,7 +8,7 @@ import java.awt.*;
 public class Oval extends RectangularForm implements GeometricalForm {
 
     public Oval(int x, int y, int width, int height, Color c) throws IllegalPositionException {
-        super(new Point(x,y,c), new Point (x,y,c));
+        super(new Point(x,y,c), width, height);
     }
     public Oval(GeometricalForm f, int width, int height, Color c) {
         x = f.getX();

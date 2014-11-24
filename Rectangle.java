@@ -8,7 +8,8 @@ import java.awt.*;
 public class Rectangle extends RectangularForm implements GeometricalForm {
 
     public Rectangle(int x, int y, int width, int height, Color c) throws IllegalPositionException {
-        super(new Point (x,y,c), new Point(x+width, y+height, c));
+        super(new Point (x,y,c), width, height);
+        this.c = c;
 
     }
     public Rectangle(GeometricalForm f, int width, int height, Color c) {
@@ -17,7 +18,6 @@ public class Rectangle extends RectangularForm implements GeometricalForm {
         this.width = width;
         this.height = height;
         this.c = c;
-
     }
 
     public int getPerimeter () {

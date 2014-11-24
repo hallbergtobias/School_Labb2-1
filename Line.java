@@ -11,11 +11,7 @@ public class Line extends RectangularForm implements GeometricalForm {
     private Color c;
 
     public Line(int x1, int y1, int x2, int y2, Color c) throws IllegalPositionException {
-        super(new Point(x1,y1,c), new Point(x2, y2, c));
-        this.x = x1;
-        this.x1 = x2;
-        this.y = y1;
-        this.y1 = y2;
+        super(new Point(x1,y1,c), x2, y2);
         this.c = c;
     }
 
@@ -46,7 +42,7 @@ public class Line extends RectangularForm implements GeometricalForm {
     }
 
     public void fill( Graphics g ) {
-        g.drawLine(x, x1, y1, y1);
+        g.drawLine(x, width, y, height);
         g.setColor(c);
     }
 }

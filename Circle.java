@@ -9,7 +9,7 @@ public class Circle extends RectangularForm implements GeometricalForm {
 
     public Circle(int x, int y, int diameter, Color c) throws IllegalPositionException {
 
-        super (new Point (x,y,c), new Point (x,y,c));
+        super (new Point (x,y,c), diameter, diameter);
 
     }
 
