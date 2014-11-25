@@ -51,11 +51,6 @@ public class Circle extends RectangularForm implements GeometricalForm {
     public int getArea () {}
 
 
-    /**
-	 * {@inheritDoc}
-	 */
-    public int compareTo( GeometricalForm f ) {}
-
 
     /**
 	 * {@inheritDoc}

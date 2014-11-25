@@ -56,6 +56,23 @@ public abstract class RectangularForm implements GeometricalForm {
 	 * {@inheritDoc}
 	 */
     public Color getColor() {}
+    
+    /**
+	 * {@inheritDoc}
+	 */
+    public int compareTo( GeometricalForm f ) {}
+    
+    /**
+	 * {@inheritDoc}
+	 */
+    @Override
+    public boolean equals(Object other){}
+    
+    /**
+	 * {@inheritDoc}
+	 */
+    @Override
+    public int hashCode() {}
 
     /**
 	 * {@inheritDoc}

@@ -41,10 +41,5 @@ public class Square extends RectangularForm implements GeometricalForm {
     /**
 	 * {@inheritDoc}
 	 */
-    public int compareTo( GeometricalForm f ) {}
-
-    /**
-	 * {@inheritDoc}
-	 */
     public void fill( Graphics g ) {}
 }

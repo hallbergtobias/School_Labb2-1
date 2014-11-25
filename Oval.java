@@ -41,11 +41,6 @@ public class Oval extends RectangularForm implements GeometricalForm {
    	 * {@inheritDoc}
    	 */
     public int getArea () {}
-    
-    /**
-   	 * {@inheritDoc}
-   	 */
-    public int compareTo( GeometricalForm f ) {}
 
 
     /**
