@@ -35,52 +35,36 @@ public abstract class RectangularForm implements GeometricalForm {
 	 * {@inheritDoc}
 	 */
 
-    public int getX() {
-        return x;
-    }
+    public int getX() {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getY() {
-        return y;
-    }
+    public int getY() {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getHeight() {
-        return height;
-    }
+    public int getHeight() {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getWidth() {
-        return width;
-    }
+    public int getWidth() {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public Color getColor() {
-        return c;
-    }
+    public Color getColor() {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public void move( int dx, int dy ) throws IllegalPositionException {
-        this.x += dx;
-        this.y += dy;
-    }
+    public void move( int dx, int dy ) throws IllegalPositionException {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public void place( int x, int y )throws IllegalPositionException {
-        this.x = x;
-        this.y = y;
-    }
+    public void place( int x, int y )throws IllegalPositionException {}
 
 }

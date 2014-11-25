@@ -18,13 +18,7 @@ public class Circle extends RectangularForm implements GeometricalForm {
 	 * @param c The color
 	 * @throws IllegalPositionException Is thrown if trying to set a negative position
 	 */
-    public Circle(int x, int y, int diameter, Color c) throws IllegalPositionException {
-        this.x = x;
-        this.y = y;
-        this.width = diameter;
-        this.height = diameter;
-        this.c = c;
-    }
+    public Circle(int x, int y, int diameter, Color c) throws IllegalPositionException {}
     
     /**
 	 * Creates a Circle with the same position as an already given GeometricalForm, a new diameter and color.
@@ -32,64 +26,39 @@ public class Circle extends RectangularForm implements GeometricalForm {
 	 * @param diameter The diameter
 	 * @param c The color
 	 */
-    public Circle(GeometricalForm f, int diameter, Color c) {
-        this.x = f.getX();
-        this.y = f.getY();
-        this.width = diameter;
-        this.height = diameter;
-
-    }
+    public Circle(GeometricalForm f, int diameter, Color c) {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getWidth () {
-        return width;
-    }
+    public int getWidth () {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getHeight () {
-        return height;
-    }
+    public int getHeight () { }
 
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getPerimeter () {
-        return 2 * 3 * getWidth()/2 ;
-    }
+    public int getPerimeter () {}
 
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getArea () {
-        return getWidth()/2*getWidth()/2*3;
-    }
+    public int getArea () {}
 
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int compareTo( GeometricalForm f ) {
-        if (this.getArea() == f.getArea()) {
-            return 0;
-        }  else if (this.getArea() > f.getArea()) {
-            return 1;
-        }   else {
-            return -1;
-        }
-    }
+    public int compareTo( GeometricalForm f ) {}
 
 
     /**
 	 * {@inheritDoc}
 	 */
-    public void fill( Graphics g ) {
-        g.drawOval(x,y,width,height);
-        g.setColor(c);
-    }
+    public void fill( Graphics g ) {}
 }

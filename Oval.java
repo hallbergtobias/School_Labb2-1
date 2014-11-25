@@ -19,13 +19,7 @@ public class Oval extends RectangularForm implements GeometricalForm {
 	 * @param c The Color
 	 * @throws IllegalPositionException Is thrown if trying to set a negative position
 	 */
-    public Oval(int x, int y, int width, int height, Color c) throws IllegalPositionException {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.c = c;
-    }
+    public Oval(int x, int y, int width, int height, Color c) throws IllegalPositionException {}
 
 
     /**
@@ -35,48 +29,27 @@ public class Oval extends RectangularForm implements GeometricalForm {
 	  * @param height The height
 	  * @param c The color
 	  */
-    public Oval(GeometricalForm f, int width, int height, Color c) {
-        x = f.getX();
-        y = f.getY();
-        this.width = width;
-        this.height = height;
-        this.c = c;
-    }
+    public Oval(GeometricalForm f, int width, int height, Color c) {}
 
 
     /**
    	 * {@inheritDoc}
    	 */
-    public int getPerimeter () {
-        return 0;
-    }
+    public int getPerimeter () {}
 
     /**
    	 * {@inheritDoc}
    	 */
-    public int getArea () {
-        return 0;
-    }
+    public int getArea () {}
     
     /**
    	 * {@inheritDoc}
    	 */
-    public int compareTo( GeometricalForm f ) {
-        if (this.getArea() == f.getArea()) {
-            return 0;
-        }  else if (this.getArea() > f.getArea()) {
-            return 1;
-        }   else {
-            return -1;
-        }
-    }
+    public int compareTo( GeometricalForm f ) {}
 
 
     /**
    	 * {@inheritDoc}
    	 */
-    public void fill( Graphics g ) {
-        g.drawOval(x,y,width,height);
-        g.setColor(c);
-    }
+    public void fill( Graphics g ) {}
 }

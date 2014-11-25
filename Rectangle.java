@@ -19,14 +19,7 @@ public class Rectangle extends RectangularForm implements GeometricalForm {
 	 * @param c The color
 	 * @throws IllegalPositionException Is thrown if trying to set a negative position
 	 */
-    public Rectangle(int x, int y, int width, int height, Color c) throws IllegalPositionException {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.c = c;
-
-    }
+    public Rectangle(int x, int y, int width, int height, Color c) throws IllegalPositionException {}
     
     /**
 	 * Creates a Rectangle with the same position as an already given GeometricalForm, a new width and height, and a color.
@@ -35,49 +28,25 @@ public class Rectangle extends RectangularForm implements GeometricalForm {
 	 * @param height The height
 	 * @param c The color
 	 */
-    public Rectangle(GeometricalForm f, int width, int height, Color c) {
-        this.x = f.getX();
-        this.y = f.getY();
-        this.width = width;
-        this.height = height;
-        this.c = c;
-    }
+    public Rectangle(GeometricalForm f, int width, int height, Color c) {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getPerimeter () {
-        return 0;
-    }
+    public int getPerimeter () {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int getArea () {
-        return height*width;
-    }
+    public int getArea () {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public int compareTo( GeometricalForm f ) {
-        if (this.getArea() == f.getArea()) {
-            return 0;
-        }  else if (this.getArea() > f.getArea()) {
-            return 1;
-        }   else {
-            return -1;
-        }
-    }
+    public int compareTo( GeometricalForm f ) {}
 
     /**
 	 * {@inheritDoc}
 	 */
-    public void fill( Graphics g ) {
-        g.drawLine(x, y, x+width, y);
-        g.drawLine(x, y, x, y+height);
-        g.drawLine(x, y+height, x+width, y+height);
-        g.drawLine(x+width, y, x+width, y+height);
-        g.setColor(c);
-    }
+    public void fill( Graphics g ) {}
 }
