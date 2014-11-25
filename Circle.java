@@ -8,11 +8,19 @@ import java.awt.*;
 public class Circle extends RectangularForm implements GeometricalForm {
 
     public Circle(int x, int y, int diameter, Color c) throws IllegalPositionException {
-
-        super (new Point (x,y,c), diameter, diameter);
+        this.x = x;
+        this.y = y;
+        this.width = diameter;
+        this.height = diameter;
+        this.c = c;
+    }
+    public Circle(GeometricalForm f, int diameter, Color c) {
+        this.x = f.getX();
+        this.y = f.getY();
+        this.width = diameter;
+        this.height = diameter;
 
     }
-
     private static final int n = 3;
 
     public int getWidth () {
@@ -32,9 +40,6 @@ public class Circle extends RectangularForm implements GeometricalForm {
     }
 
     public int compareTo( GeometricalForm f ) {
-        if (!this.equals(f)) {
-            return -1;
-        }
         if (this.getArea() == f.getArea()) {
             return 0;
         }  else if (this.getArea() > f.getArea()) {
@@ -45,6 +50,7 @@ public class Circle extends RectangularForm implements GeometricalForm {
     }
 
     public void fill( Graphics g ) {
-
+        g.drawOval(x,y,width,height);
+        g.setColor(c);
     }
 }

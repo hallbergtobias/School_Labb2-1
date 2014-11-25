@@ -13,18 +13,6 @@ public abstract class RectangularForm implements GeometricalForm {
     int height;
     Color c;
 
-    public RectangularForm (Point a, int b, int c){
-        this.x = a.getX();
-        this.y = a.getY();
-        this.width = b;
-        this.height = c;
-    }
-
-    public RectangularForm () {
-        x = 0;
-        y = 0;
-    }
-
     public int getX() {
         return x;
     }
@@ -46,11 +34,13 @@ public abstract class RectangularForm implements GeometricalForm {
     }
 
     public void move( int dx, int dy ) throws IllegalPositionException {
-
+        this.x += dx;
+        this.y += dy;
     }
 
     public void place( int x, int y )throws IllegalPositionException {
-
+        this.x = x;
+        this.y = y;
     }
 
 }

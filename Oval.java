@@ -8,8 +8,13 @@ import java.awt.*;
 public class Oval extends RectangularForm implements GeometricalForm {
 
     public Oval(int x, int y, int width, int height, Color c) throws IllegalPositionException {
-        super(new Point(x,y,c), width, height);
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.c = c;
     }
+
     public Oval(GeometricalForm f, int width, int height, Color c) {
         x = f.getX();
         y = f.getY();
@@ -37,6 +42,7 @@ public class Oval extends RectangularForm implements GeometricalForm {
     }
 
     public void fill( Graphics g ) {
-
+        g.drawOval(x,y,width,height);
+        g.setColor(c);
     }
 }

@@ -7,26 +7,29 @@ import java.awt.*;
  */
 public class Square extends RectangularForm implements GeometricalForm {
 
-    private int side;
 
     public Square(int x, int y, int side, Color c) throws IllegalPositionException {
-        super(new Point(x, y, c), side, side);
-        this.side = side;
+        this.x = x;
+        this.y = y;
+        this.width = side;
+        this.height = side;
         this.c = c;
     }
 
     public Square(GeometricalForm f, int side, Color c) {
         x = f.getX();
         y = f.getY();
-        this.side = side;
+        this.height = side;
+        this.width = side;
+        this.c = c;
     }
 
     public int getPerimeter () {
-        return side*4;
+        return height*4;
     }
 
     public int getArea () {
-        return side*side;
+        return height*height;
     }
 
     public int compareTo( GeometricalForm f ) {
@@ -40,10 +43,10 @@ public class Square extends RectangularForm implements GeometricalForm {
     }
 
     public void fill( Graphics g ) {
-        g.drawLine(x, y, x+side, y );
-        g.drawLine(x, y, x, y+side);
-        g.drawLine(x+side, y, x+side, y+side);
-        g.drawLine(x, y+side, x+side, y+side);
+        g.drawLine(x, y, x+width, y );
+        g.drawLine(x, y, x, y+width);
+        g.drawLine(x+width, y, x+width, y+width);
+        g.drawLine(x, y+width, x+width, y+width);
         g.setColor(c);
     }
 }
