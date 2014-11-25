@@ -34,6 +34,7 @@ public abstract class RectangularForm implements GeometricalForm {
     /**
 	 * {@inheritDoc}
 	 */
+
     public int getX() {
         return x;
     }

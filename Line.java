@@ -27,6 +27,7 @@ public class Line extends RectangularForm implements GeometricalForm {
         this.c = c;
     }
 
+
     /**
 	 * Creates a Line from two GeometricalForms and a color.
 	 * @param f1 A GeometricalForm
@@ -40,13 +41,15 @@ public class Line extends RectangularForm implements GeometricalForm {
         this.height = f2.getHeight();
 
     }
-    
+
+
     /**
 	 * {@inheritDoc}
 	 */
     public int getPerimeter () {
         return (width) + (height);
     }
+
 
     /**
 	 * {@inheritDoc}
@@ -67,6 +70,7 @@ public class Line extends RectangularForm implements GeometricalForm {
             return -1;
         }
     }
+
 
     /**
 	 * {@inheritDoc}

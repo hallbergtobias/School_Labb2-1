@@ -45,12 +45,14 @@ public class Point extends RectangularForm implements GeometricalForm {
         return 0;
     }
 
+
     /**
 	 * {@inheritDoc}
 	 */
     public int getArea() {
         return 0;
     }
+
 
     /**
 	 * {@inheritDoc}

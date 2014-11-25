@@ -10,7 +10,6 @@ import java.awt.*;
  */
 public class Oval extends RectangularForm implements GeometricalForm {
 
-	
 	/**
 	 * Creates an Oval with a position, height, width and color.
 	 * @param x The X coordinate
@@ -28,6 +27,7 @@ public class Oval extends RectangularForm implements GeometricalForm {
         this.c = c;
     }
 
+
     /**
 	  * Creates an Oval with the same position as an already given GeometricalForm, a new height, width and color.
 	  * @param f A GeometricalForm
@@ -43,6 +43,7 @@ public class Oval extends RectangularForm implements GeometricalForm {
         this.c = c;
     }
 
+
     /**
    	 * {@inheritDoc}
    	 */
@@ -56,7 +57,7 @@ public class Oval extends RectangularForm implements GeometricalForm {
     public int getArea () {
         return 0;
     }
-
+    
     /**
    	 * {@inheritDoc}
    	 */
@@ -69,6 +70,7 @@ public class Oval extends RectangularForm implements GeometricalForm {
             return -1;
         }
     }
+
 
     /**
    	 * {@inheritDoc}

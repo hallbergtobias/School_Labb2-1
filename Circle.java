@@ -10,7 +10,6 @@ import java.awt.*;
  */
 public class Circle extends RectangularForm implements GeometricalForm {
 
-	
 	/**
 	 * Creates a Circle from a position, diameter and color.
 	 * @param x X coordinate from top left corner
@@ -40,7 +39,6 @@ public class Circle extends RectangularForm implements GeometricalForm {
         this.height = diameter;
 
     }
-    
 
     /**
 	 * {@inheritDoc}
@@ -56,6 +54,7 @@ public class Circle extends RectangularForm implements GeometricalForm {
         return height;
     }
 
+
     /**
 	 * {@inheritDoc}
 	 */
@@ -63,12 +62,14 @@ public class Circle extends RectangularForm implements GeometricalForm {
         return 2 * 3 * getWidth()/2 ;
     }
 
+
     /**
 	 * {@inheritDoc}
 	 */
     public int getArea () {
         return getWidth()/2*getWidth()/2*3;
     }
+
 
     /**
 	 * {@inheritDoc}
@@ -82,6 +83,7 @@ public class Circle extends RectangularForm implements GeometricalForm {
             return -1;
         }
     }
+
 
     /**
 	 * {@inheritDoc}

@@ -10,7 +10,6 @@ import java.awt.*;
  */
 public class Square extends RectangularForm implements GeometricalForm {
 
-
 	/**
 	 * Creates a Square from a position, size and color.
 	 * @param x X coordinate
